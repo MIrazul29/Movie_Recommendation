@@ -4,13 +4,13 @@ This is a web application for recommending movies based on user preferences. It 
 # Installation
 To install and run this web application on your local machine, follow these steps:
 
-1.Clone this repository to your local machine using git clone.
-2.Install the required dependencies using pip install -r requirements.txt.
-3.Create a new database and run the migrations using python manage.py migrate.
-4.Load the sample movie data using python manage.py loaddata movies.json.
-5.Start the web application using python manage.py runserver.
+1. Clone this repository to your local machine using git clone.
+2. Install the required dependencies using pip install -r requirements.txt.
+3. Create a new database and run the migrations using python manage.py migrate.
+4. Load the sample movie data using python manage.py loaddata movies.json.
+5. Start the web application using python manage.py runserver.
 Usage
-6.To use the web application, simply open a web browser and navigate to the URL where the application is hosted (http://localhost:8000/ by default). You will be prompted to create a new account or log in if you already have one.
+6. To use the web application, simply open a web browser and navigate to the URL where the application is hosted (http://localhost:8000/ by default). You will be prompted to create a new account or log in if you already have one.
 
 Once you are logged in, you can rate movies by giving them a score from 1 to 5 stars. Based on your ratings, the application will recommend movies that you might like. You can view your personalized recommendations by clicking the "Recommendations" link in the navigation bar.
 
