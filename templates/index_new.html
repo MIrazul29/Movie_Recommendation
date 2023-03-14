@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <title>Welcome to movie recommendation</title>
+    <style>
+        body {
+            background-image: url('/static/bg1.jpg');
+            background-size: cover;
+            background-blend-mode: darken;
+            font-family: 'Lora', serif;
+        }
+
+        .contain {
+            display: flex;
+            justify-content: center;
+        }
+
+        .contain form {
+            padding: 130px 114px;
+            margin: 10px 72px;
+        }
+
+        .first {
+            margin: 5px 27px;
+            padding: 11px 201px;
+            border: 2px solid black;
+            border-radius: 79px;
+            font-family: 'Lora', serif;
+        }
+
+        .second {
+            color: white;
+            background-color: brown;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 7px 80px;
+            margin: 9px 200px;
+            font-family: 'Lora', serif;
+        }
+
+        .give {
+            display: flex;
+            justify-content: center;
+        }
+
+        .give p {
+            background-color: white;
+            color: BLACK;
+            display: flex;
+            justify-content: center;
+            border: 2px solid black;
+            border-radius: 29px;
+            padding: 8px 41px;
+            margin: 9px 11px;
+        }
+
+        .input::before {
+            content: "MOVIE NAME YOU ENTERED:    ";
+        }
+
+        .output1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .output1 p {
+            background-color: rgb(255, 255, 255);
+            color: BLACK;
+            display: flex;
+            justify-content: center;
+            border: 2px solid black;
+            border-radius: 29px;
+            padding: 8px 41px;
+            margin: 9px 11px;
+        }
+
+        .output::before {
+            content: "MOVIE RECOMMENDED FOR YOU:    ";
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <form method="POST" class="form" action="{{url_for('home')}}">
+            <input type="text" class="first" name="size1" placeholder="ENTER MOVIE NAME">
+            <br>
+            <br>
+            <input type="submit" class="second" placeholder="SUBMIT">
+        </form>
+    </div>
+    <div class="give">
+        <p class="input">
+            {{movie_input}}
+        </p>
+    </div>
+    <div class="output1">
+        <p class="output">{{recommendation}}
+        </p>
+    </div>
+</body>
+</html>
